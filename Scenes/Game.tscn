@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/player.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/player.cs" type="Script" id=2]
+
+[node name="Game" type="Node2D"]
+
+[node name="player" type="Sprite" parent="."]
+position = Vector2( 23.6205, 24.8658 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
