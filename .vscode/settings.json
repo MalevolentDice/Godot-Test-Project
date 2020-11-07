@@ -1,3 +1,4 @@
 {
-  "godot_tools.editor_path": "/home/zerebreat/.local/share/godot/Godot_v3.2.2-stable_mono_x11_64/Godot_v3.2.2-stable_mono_x11.64"
+  "godot_tools.editor_path": "/home/zerebreat/.local/share/godot/Godot_v3.2.2-stable_mono_x11_64/Godot_v3.2.2-stable_mono_x11.64",
+  "omnisharp.path": "latest"
 }
