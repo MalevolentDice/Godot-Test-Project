@@ -6,6 +6,7 @@
 [node name="Game" type="Node2D"]
 
 [node name="player" type="Sprite" parent="."]
-position = Vector2( 23.6205, 24.8658 )
+position = Vector2( 0, 256 )
 texture = ExtResource( 1 )
+centered = false
 script = ExtResource( 2 )
