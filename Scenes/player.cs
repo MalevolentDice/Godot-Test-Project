@@ -1,13 +1,13 @@
 using Godot;
 using System;
 
-public class player : Sprite
+public class player : AnimatedSprite
 {
-  private Vector2 _velocity = new Vector2(0, 0);
-  private readonly int _maxVelocity = 10;
-  private readonly int _acceleration = 5;
+  private Vector2 _direction = new Vector2(0, 0);
+  private readonly int _speed = 50;
   public override void _Ready()
   {
+    Play();
   }
 
   public player()
@@ -19,12 +19,16 @@ public class player : Sprite
   public override void _Process(float delta)
   {
     if (Input.IsKeyPressed((int)KeyList.A))
-      _velocity += new Vector2(-1, 0);
-    if (Input.IsKeyPressed((int)KeyList.D))
-      _velocity += new Vector2(1, 0);
-
-    _velocity.x = Math.Min(_velocity.x, _maxVelocity);
-    _velocity.x = Math.Max(_velocity.x, -_maxVelocity);
-    Position += _velocity * delta * _acceleration;
+    {
+      _direction = new Vector2(-1, 0);
+      this.FlipH = false;
+    }
+    else if (Input.IsKeyPressed((int)KeyList.D))
+    {
+      _direction = new Vector2(1, 0);
+      this.FlipH = true;
+    }
+    Position += _direction * delta * _speed;
+    _direction = new Vector2(0, 0);
   }
 }
