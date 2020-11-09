@@ -12,7 +12,7 @@ public class player : AnimatedSprite
 
   public player()
   {
-    // this.Position = new Vector2(32,288-32);
+    // Position = new Vector2(32,288-32);
   }
 
   // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -21,13 +21,14 @@ public class player : AnimatedSprite
     if (Input.IsKeyPressed((int)KeyList.A))
     {
       _direction = new Vector2(-1, 0);
-      this.FlipH = false;
+      FlipH = false;
     }
     else if (Input.IsKeyPressed((int)KeyList.D))
     {
       _direction = new Vector2(1, 0);
-      this.FlipH = true;
+      FlipH = true;
     }
+
     Position += _direction * delta * _speed;
     _direction = new Vector2(0, 0);
   }
